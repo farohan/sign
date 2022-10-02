@@ -34,13 +34,27 @@ ctx.lineJoin = ctx.lineCap = 'round';
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+
     const url = canvas.toDataURL();
     const img = document.createElement('img');
     img.src = url;
     img.height = canvas.height;
     img.width = canvas.width;
+    img.style.marginTop = '0.3rem';
+    img.style.marginBottom = '1.5rem';
+    img.style.border = '3px solid teal';
+    img.style.borderRadius = '5px';
     img.style.display = 'block';
+
+    const downloadLink = document.createElement('a');
+    downloadLink.href = url;
+    downloadLink.classList.add('download');
+    downloadLink.innerHTML = 'Download';
+    downloadLink.setAttribute('download', "download");
+    
     form.appendChild(img);
+    form.appendChild(downloadLink);
+
     clearPad();
 });
 
