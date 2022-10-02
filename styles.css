@@ -13,6 +13,10 @@
     padding: 1rem;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   .signature-pad-form {
     max-width: 300px;
     margin: 0 auto;
@@ -28,14 +32,23 @@
     color: var(--primary-color);
   }
 
-  .submit-button {
+  .submit-button,
+  .download {
+    font-size: 1rem;
     width: 100%;
-    background-color: var(--primary-color);
     border: none;
     padding: 0.5rem 1rem;
     color: #fff;
     cursor: pointer;
+  }
+
+  .submit-button {
+    background-color: var(--primary-color);
     margin-top: 2rem;
+  }
+
+  .download {
+    background-color: slateblue;
   }
 
   @media (pointer: coarse) {
